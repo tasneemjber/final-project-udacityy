@@ -160,11 +160,11 @@
       });
     }
   }
-})({"5jDO0":[function(require,module,exports,__globalThis) {
+})({"dPBab":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 64197;
+var HMR_SERVER_PORT = 60965;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -970,7 +970,7 @@ const showError = (message)=>{
 // Add configuration with ESLint for rules that disallow 'var', unused variables, require a semicolon  
 // and at least two other rules: https://eslint.org/docs/latest/rules/
 // Use ESLint to identify the errors and Prettier to format the code.
-// Create a general element with specified text
+// Create a general element with specified text// Create a general element with specified text
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "createElement", ()=>createElement);
@@ -985,49 +985,43 @@ const createElement = (elementType, text)=>{
     element.textContent = text;
     return element;
 };
-// Creates images with alt
 const createImage = (url, alt)=>{
-    const img = document.createElement('img');
+    const img = document.createElement("img");
     img.src = url;
     img.alt = alt;
     return img;
 };
-// Create a header element with specified text and data attribute
 const createHeader = (headerType, text, dataCy)=>{
     const header = document.createElement(headerType);
     header.textContent = text;
-    header.setAttribute('data-cy', dataCy);
+    header.setAttribute("data-cy", dataCy);
     return header;
 };
-// Create a button that toggles the visibility of the form
 const createToggleButton = (text, element)=>{
-    const button = document.createElement('button');
+    const button = document.createElement("button");
     button.textContent = text;
-    button.addEventListener('click', ()=>{
-        element.classList.toggle('notVisible');
+    button.addEventListener("click", ()=>{
+        element.classList.toggle("notVisible");
     });
     return button;
 };
-// Helper function to create a label element
 const createLabel = (text, htmlFor)=>{
-    const label = document.createElement('label');
+    const label = document.createElement("label");
     label.textContent = text;
-    label.setAttribute('for', htmlFor);
+    label.setAttribute("for", htmlFor);
     return label;
 };
-// Helper function to create an input element
 const createInput = (name)=>{
-    const input = document.createElement('input');
+    const input = document.createElement("input");
     input.name = name;
     input.id = name;
     return input;
 };
-// Helper function to create a submit button
 const createSubmitButton = (value)=>{
-    const submit = document.createElement('input');
-    submit.type = 'submit';
+    const submit = document.createElement("input");
+    submit.type = "submit";
     submit.value = value;
-    submit.setAttribute('data-cy', 'create-set-submit');
+    submit.setAttribute("data-cy", "create-set-submit");
     return submit;
 };
 
@@ -1183,6 +1177,6 @@ const renderHomePage = ()=>{
     main.append(homeContainer);
 };
 
-},{"../images/homePage.png":"9QOwg","./utilityRenderFunctions.js":"7Z6eA","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"9QOwg":[function() {},{}]},["5jDO0","dkgmw"], "dkgmw", "parcelRequireccf0", {})
+},{"./utilityRenderFunctions.js":"7Z6eA","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../images/homePage.png":"9QOwg"}],"9QOwg":[function() {},{}]},["dPBab","dkgmw"], "dkgmw", "parcelRequireccf0", {})
 
 //# sourceMappingURL=starter.de29c812.js.map
