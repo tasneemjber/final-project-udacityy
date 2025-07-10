@@ -18,7 +18,8 @@ import { createHeader, createToggleButton } from "./utilityRenderFunctions.js";
 // Function responsible for rendering the page
 export const renderCardSetsPage = () => {
   // Creates a container for the pages contents
-  const container = document.createElement("div");
+const container = document.createElement("div");
+container.setAttribute("data-cy", "card-sets-page");
   container.className = "cardPageContainer";
   // Creates the header for the page
   const pageHeader = createHeader(

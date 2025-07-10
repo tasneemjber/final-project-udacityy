@@ -160,11 +160,11 @@
       });
     }
   }
-})({"4SplV":[function(require,module,exports,__globalThis) {
+})({"5jDO0":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 51515;
+var HMR_SERVER_PORT = 64197;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -682,7 +682,10 @@ const addListenerToNavigation = ()=>{
 // Helper function to add event listeners to navigation items
 const addNavListener = (elementId, callback)=>{
     const element = document.getElementById(elementId);
-    if (element) element.addEventListener("click", callback);
+    if (element) element.addEventListener("click", (e)=>{
+        e.preventDefault();
+        callback();
+    });
 };
 // Initialize the page
 // Load the home page
@@ -711,6 +714,7 @@ var _utilityRenderFunctionsJs = require("./utilityRenderFunctions.js");
 const renderCardSetsPage = ()=>{
     // Creates a container for the pages contents
     const container = document.createElement("div");
+    container.setAttribute("data-cy", "card-sets-page");
     container.className = "cardPageContainer";
     // Creates the header for the page
     const pageHeader = (0, _utilityRenderFunctionsJs.createHeader)("h2", "Study Set Library", "study-set-header");
@@ -940,8 +944,6 @@ const addCard = (term, description, set)=>{
 };
 
 },{"./cardsPage.js":"fMRv2","./errors.js":"guLk0","./utilityRenderFunctions.js":"7Z6eA","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"guLk0":[function(require,module,exports,__globalThis) {
-//DO NOT CHANGE ANYTHING IN THIS FILE//
-//This file is responsible for creating errors for our form
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "showError", ()=>showError);
@@ -953,6 +955,7 @@ const showError = (message)=>{
         error.textContent = message;
         error.style.color = "red";
         error.className = "error";
+        error.setAttribute("data-cy", "form-error");
         form.appendChild(error);
     } else if (existingError.textContent !== message) existingError.textContent = message;
 };
@@ -1180,6 +1183,6 @@ const renderHomePage = ()=>{
     main.append(homeContainer);
 };
 
-},{"../images/homePage.png":"9QOwg","./utilityRenderFunctions.js":"7Z6eA","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"9QOwg":[function() {},{}]},["4SplV","dkgmw"], "dkgmw", "parcelRequireccf0", {})
+},{"../images/homePage.png":"9QOwg","./utilityRenderFunctions.js":"7Z6eA","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"9QOwg":[function() {},{}]},["5jDO0","dkgmw"], "dkgmw", "parcelRequireccf0", {})
 
 //# sourceMappingURL=starter.de29c812.js.map

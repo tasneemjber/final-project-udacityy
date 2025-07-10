@@ -17,7 +17,10 @@ const addListenerToNavigation = () => {
 const addNavListener = (elementId, callback) => {
   const element = document.getElementById(elementId);
   if (element) {
-    element.addEventListener("click", callback);
+    element.addEventListener("click", (e) => {
+      e.preventDefault();
+      callback();  
+    });
   }
 };
 
